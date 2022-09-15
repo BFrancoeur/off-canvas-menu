@@ -1,40 +1,57 @@
 /* Off Canvas Menu */
-.section {
+.nav-section {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+#btn-container {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    overflow: visible;
+    flex-direction: column;
+    padding: 6rem 3rem;
+    background-color: rgb(54, 185, 174);
+    transition: all .2s;
 }
 
-.container {
-    justify-content: flex-start;
-    /* min-height: 200px; */
-    padding: 3rem;
-    background-color: rgb(54, 185, 174);
-    
+#btn-container.slide-right {
+    left: 248.5px;
 }
-.off-canvas-menu {
-    position: relative;
+
+#off-canvas-menu {
+    
+    position: absolute;
     left: -248.5px;
-    width: 0%;
+    width: 25%;
     background-color: #444;
     padding: 3rem 0;
     transition: all .2s;
 }
 
-.off-canvas-menu > nav > .menu {
+#off-canvas-menu.show {
+    left: 0;
+}
+
+#off-canvas-menu > nav > .menu {
     display: flex;
     flex-direction: column;
     list-style-type: none;
     min-height: 240px;
 }
 
-.off-canvas-menu>nav>.menu>.menu-item {
+#off-canvas-menu>nav>.menu>.menu-item {
     flex: 1 0 100%;
     overflow: hidden;
 }
 
-.off-canvas-menu>nav>.menu>.menu-item>.link {
+#off-canvas-menu>nav>.menu>.menu-item>.link {
     display: inline-block;
     width: 100%;
     color: #fff;
@@ -46,24 +63,18 @@
     transition: ease-in-out .2s;
 }
 
-.off-canvas-menu>nav>.menu>.menu-item>.link:hover {
+#off-canvas-menu>nav>.menu>.menu-item>.link:hover {
     background-color: #111;
 }
 
 /* Menu Toggle Button */
-.container {
-   width: 100%;
-    display: flex;
-    flex-direction:  column;
-}
-
 .section-header {
     font-size: 2.4rem;
     line-height: 3.6rem;
 
 }
 
-.menu-toggle-button {
+#menu-toggle-button {
     max-width: 10rem;
     font-size: 1.5rem;
     color: #fff;
@@ -76,7 +87,7 @@
     border-radius: 5px;
 }
 
-.menu-toggle-button:hover {
+#menu-toggle-button:hover {
     color: rgb(54, 185, 174);
     background-color: #f0f0f0;
     border: 1px solid #ccc;

@@ -13,8 +13,9 @@
   </head>
 
   <body>
-    <section class="section">
-      <div class="off-canvas-menu">
+    <section class="nav-section">
+      <!-- start with 100% width -->
+      <div id="off-canvas-menu">
         <nav>
           <ul class="menu">
             <li class="menu-item"><a href="#" class="link">Home</a></li>
@@ -24,17 +25,14 @@
           </ul>
         </nav>
       </div>
-      <div class="container">
+      <!-- #off-canvas-menu -->
+      <div id="btn-container">
         <h2 class="section-header">Click the button to open the menu!</h2>
-        <a
-          href=""
-          role="button"
-          class="menu-toggle-button"
-          onClick="toggleMenu()"
-          >Menu</a
-        >
+        <a href="" role="button" id="menu-toggle-button">Menu</a>
       </div>
+      <!-- .btn-container -->
     </section>
+    <!-- .nav-section -->
 
     <script src="js/main.js"></script>
   </body>
